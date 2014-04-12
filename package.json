@@ -4,7 +4,7 @@
   "description": "Streaming environment variable reader",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/mocha --reporter spec test"
   },
   "repository": {
     "type": "git",
@@ -27,8 +27,8 @@
   },
   "homepage": "https://github.com/digitalsadhu/env-reader",
   "devDependencies": {
-    "env-writer": "0.0.1",
-    "env-parser": "0.0.1"
+    "chai": "~1.9.1",
+    "mocha": "~1.18.2"
   },
   "dependencies": {
     "through": "~2.3.4"
