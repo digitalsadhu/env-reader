@@ -1,6 +1,6 @@
 {
   "name": "env-reader",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Streaming environment variable reader",
   "main": "index.js",
   "scripts": {
