@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/digitalsadhu/env-reader.svg?branch=master)](https://travis-ci.org/digitalsadhu/env-reader)
+
 env-reader
 ==========
 
