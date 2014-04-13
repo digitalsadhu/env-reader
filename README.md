@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/digitalsadhu/env-reader.svg?branch=master)](https://travis-ci.org/digitalsadhu/env-reader)
 
+[![NPM](https://nodei.co/npm/env-reader.png)](https://nodei.co/npm/env-reader/)
+
 env-reader
 ==========
 
