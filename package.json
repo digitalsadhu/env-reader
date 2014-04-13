@@ -4,7 +4,8 @@
   "description": "Streaming environment variable reader",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha --reporter spec test"
+    "test": "node_modules/.bin/mocha --reporter spec test",
+    "jshint": "node_modules/.bin/jshint ."
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,8 @@
   "homepage": "https://github.com/digitalsadhu/env-reader",
   "devDependencies": {
     "chai": "~1.9.1",
-    "mocha": "~1.18.2"
+    "mocha": "~1.18.2",
+    "jshint": "~2.5.0"
   },
   "dependencies": {
     "through": "~2.3.4"
