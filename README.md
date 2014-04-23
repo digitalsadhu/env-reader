@@ -2,6 +2,8 @@
 
 [![NPM](https://nodei.co/npm/env-reader.png)](https://nodei.co/npm/env-reader/)
 
+[![Media Suite](http://mediasuite.co.nz/ms-badge.png)](http://mediasuite.co.nz)
+
 env-reader
 ==========
 
