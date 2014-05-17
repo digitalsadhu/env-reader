@@ -64,5 +64,21 @@ describe('env-reader module', function () {
       env.write(new Buffer('\n  test  =  test  \n', 'utf8'))
     })
 
+    it('should trim the optional export keyword', function (done) {
+      env = envReader().on('data', function (datum) {
+        expect(datum).to.equal('test=test')
+        done()
+      })
+      env.write(new Buffer('export test=test', 'utf8'))
+    })
+
+    it('should trim the export keyword and whitespace', function (done) {
+      env = envReader().on('data', function (datum) {
+        expect(datum).to.equal('test=test')
+        done()
+      })
+      env.write(new Buffer('  export  test  =  test  \n', 'utf8'))
+    })
+
   })
 })
