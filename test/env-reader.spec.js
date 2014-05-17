@@ -61,7 +61,7 @@ describe('env-reader module', function () {
         expect(datum).to.equal('test=test')
         done()
       })
-      env.write(new Buffer('\n test = test \n', 'utf8'))
+      env.write(new Buffer('\n  test  =  test  \n', 'utf8'))
     })
 
   })

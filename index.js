@@ -28,9 +28,7 @@ var write = function write(chunk) {
     if (!line.match(/^.*=.*$/)) return
 
     //trim spaces
-    line = line.replace(/\s*=\s*/, '=')
-    line = line.replace(/^\s*(.*)\s*=\s*(.*)$/, '$1=$2')
-    line = line.replace(/\s$/, '')
+    line = line.replace(/^\s*(.*?)\s*=\s*(.*?)\s*$/, '$1=$2')
 
     self.emit('data', line)
   })
