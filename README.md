@@ -10,7 +10,8 @@ env-reader
 Streaming environment variable reader
 
 Accepts simple key=value data and passes it on after performing some basic
-filtering out of things like blank lines, comment lines and invalid env lines
+filtering out of things like blank lines, comment lines and invalid env lines. Now
+also handles removing the 'export' keyword from the start of env var lines
 
 ## Examples
 
@@ -48,6 +49,8 @@ DB_HOST=localhost
 DB_USER=user
 DB_PASS=password
 DB_NAME=development
+
+export EXPORTED_VAR=true
 ```
 
 and will emit the following lines from such a file one after another:
@@ -58,6 +61,7 @@ DB_HOST=localhost
 DB_USER=user
 DB_PASS=password
 DB_NAME=development
+EXPORTED_VAR=true
 ```
 
 if streamed the data in the following way:
