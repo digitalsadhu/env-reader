@@ -27,10 +27,12 @@ var write = function write(chunk) {
     //skip lines that dont have an =
     if (!line.match(/^.*=.*$/)) return
 
-    //trim spaces
-    line = line.replace(/\s*=\s*/, '=')
-    line = line.replace(/^\s*(.*)\s*=\s*(.*)$/, '$1=$2')
-    line = line.replace(/\s$/, '')
+    //extract variable name, trimming whitespace
+    line = line.replace(/^\s*(.*?)\s*=/, '$1=')
+    //remove the optional export keyword before variable name
+    line = line.replace(/^(?:export\s)?\s*(.*?)=/, '$1=')
+    //extract variable value, trimming whitespace
+    line = line.replace(/^(.*?)=\s*(.*?)\s*$/, '$1=$2')
 
     self.emit('data', line)
   })
